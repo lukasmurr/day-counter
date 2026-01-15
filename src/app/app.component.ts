@@ -6,8 +6,8 @@ import { CountdownService } from './countdown.service';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.scss'
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss'
 })
 export class App {
   private countdownService = inject(CountdownService);

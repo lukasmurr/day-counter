@@ -1,0 +1,220 @@
+:host {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: block;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #333;
+  padding: 1rem;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+
+  @media (min-width: 480px) {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 2.8rem;
+  }
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s ease;
+
+  @media (min-width: 768px) {
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.main-countdown {
+  .timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    @media (min-width: 480px) {
+      gap: 1.5rem;
+      flex-wrap: nowrap;
+    }
+
+    @media (min-width: 768px) {
+      gap: 3rem;
+    }
+
+    .time-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 60px;
+
+      .value {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: #e74c3c;
+        line-height: 1.1;
+        font-variant-numeric: tabular-nums;
+
+        @media (min-width: 480px) {
+          font-size: 3rem;
+        }
+
+        @media (min-width: 768px) {
+          font-size: 5rem;
+        }
+
+        @media (min-width: 1200px) {
+          font-size: 6rem;
+        }
+      }
+
+      .label {
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 0.7rem;
+        color: #7f8c8d;
+        margin-top: 0.25rem;
+        font-weight: 600;
+
+        @media (min-width: 480px) {
+          font-size: 0.8rem;
+          margin-top: 0.5rem;
+          letter-spacing: 1px;
+        }
+
+        @media (min-width: 768px) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    color: #34495e;
+    margin-bottom: 0.8rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+  }
+}
+
+.large-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #3498db;
+  font-variant-numeric: tabular-nums;
+
+  @media (min-width: 768px) {
+    font-size: 3.5rem;
+  }
+}
+
+
+.timer.small {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #9b59b6;
+  flex-wrap: wrap;
+
+  @media (min-width: 768px) {
+    gap: 1rem;
+    font-size: 1.5rem;
+  }
+
+  div {
+    display: flex;
+    align-items: baseline;
+  }
+
+  span.v {
+    font-size: 1.8rem;
+    margin-right: 2px;
+    font-variant-numeric: tabular-nums;
+
+    @media (min-width: 768px) {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+.finished,
+.finished-small {
+  color: #27ae60;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.finished {
+  font-size: 1.5rem;
+
+  @media (min-width: 768px) {
+    font-size: 2.5rem;
+  }
+}
+
+.finished-small {
+  font-size: 1.2rem;
+
+  @media (min-width: 768px) {
+    font-size: 1.6rem;
+  }
+}
+
+p {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  color: #95a5a6;
+  font-size: 0.9rem;
+}

@@ -1,59 +1,75 @@
 # DayCounter
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.0.
+Eine Angular 21 Single Page Application, die die Zeit bis zur Rückkehr einer geliebten Person aus dem Auslandssemester zählt.
 
-## Development server
+## 🎯 Funktionen
 
-To start a local development server, run:
+Die App bietet eine übersichtliche, responsive Ansicht für drei wichtige Zeitpunkte:
 
-```bash
-ng serve
+1.  **Countdown bis zur Rückkehr**: Zeigt Tage, Stunden, Minuten und Sekunden bis zum `RETURN_DATE`.
+2.  **Vergangene Zeit**: Zählt die Tage seit dem Abflug (`DEPARTURE_DATE`).
+3.  **Nächstes Treffen**: Ein separater Countdown für ein geplantes Wiedersehen (`NEXT_MEETING`).
+
+**Besonderheiten:**
+- **Responsive Design**: Optimiert für Desktop, Tablet und Mobile (Mobile-First CSS).
+- **Echtzeit-Aktualisierung**: Die Werte werden jede Sekunde aktualisiert.
+- **Ziel-Status**: Zeigt liebevolle Nachrichten an, wenn ein Datum erreicht wurde (z.B. "Sie ist wieder da!").
+
+## 🛠️ Technologien
+
+Das Projekt wurde mit modernen Web-Standards gebaut:
+
+- **Framework**: [Angular 21](https://angular.dev/) (Preview/Latest Features)
+- **Architektur**: Standalone Components & Zoneless-ready (Signals-based).
+- **State Management**: Angular Signals (`computed`, `signal`).
+- **Styling**: SCSS mit CSS Grid & Flexbox.
+
+## ⚙️ Konfiguration (Daten ändern)
+
+Die Daten für die Zeitpunkte sind als **harte Konstanten** im `CountdownService` hinterlegt.
+Um die Daten anzupassen, bearbeite die Datei:
+
+`src/app/countdown.service.ts`
+
+```typescript
+// Harte Konstanten wie angefordert
+const RETURN_DATE = new Date('2026-06-30T12:00:00'); 
+const DEPARTURE_DATE = new Date('2026-01-01T08:00:00'); 
+const NEXT_MEETING = new Date('2026-02-14T18:00:00'); 
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🚀 Installation & Start
 
-## Code scaffolding
+Voraussetzung: Node.js und npm installiert.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1.  **Repository klonen**
+    ```bash
+    git clone https://github.com/dein-user/day-counter.git
+    cd day-counter
+    ```
 
-```bash
-ng generate component component-name
-```
+2.  **Abhängigkeiten installieren**
+    ```bash
+    npm install
+    ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+3.  **Entwicklungsserver starten**
+    ```bash
+    npm start
+    # oder
+    ng serve
+    ```
+    Öffne `http://localhost:4200/` im Browser.
 
-```bash
-ng generate --help
-```
+## 📦 Deployment (GitHub Pages)
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Das Projekt ist für das Deployment auf GitHub Pages vorbereitet.
+Zum Bauen und Veröffentlichen (vorausgesetzt `angular-cli-ghpages` ist eingerichtet):
 
 ```bash
-ng test
+ng deploy --base-href=/day-counter/
 ```
 
-## Running end-to-end tests
+## 📄 Lizenz
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Dieses Projekt ist für private Zwecke erstellt.
