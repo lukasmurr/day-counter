@@ -32,7 +32,6 @@ Um die Daten anzupassen, bearbeite die Datei:
 `src/app/countdown.service.ts`
 
 ```typescript
-// Harte Konstanten wie angefordert
 const RETURN_DATE = new Date('2026-06-30T12:00:00'); 
 const DEPARTURE_DATE = new Date('2026-01-01T08:00:00'); 
 const NEXT_MEETING = new Date('2026-02-14T18:00:00'); 
