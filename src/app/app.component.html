@@ -48,6 +48,21 @@
       <p>Bis zum Wiedersehen</p>
       }
     </section>
+
+    <section class="card">
+      <h2>Vergangene Treffen</h2>
+      @if (pastMeetings().length > 0) {
+      <ul>
+        @for (meeting of pastMeetings(); track $index) {
+        <li>
+          {{ meeting.start.toLocaleDateString() }} - {{ meeting.end.toLocaleDateString() }}
+        </li>
+        }
+      </ul>
+      } @else {
+        <div>Keine vergangenen Treffen</div>
+      }
+    </section>
   </div>
 </div>
 

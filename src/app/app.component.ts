@@ -16,13 +16,14 @@ export class App {
   protected daysSinceDeparture = this.countdownService.daysSinceDeparture;
   protected timeUntilMeeting = this.countdownService.timeUntilMeeting;
 
+  protected currentMeeting = this.countdownService.currentMeeting;
+  protected nextMeeting = this.countdownService.nextMeeting;
+  protected pastMeetings = this.countdownService.pastMeetings;
+
   protected isReturned = () => this.timeUntilReturn().days === 0 &&
     this.timeUntilReturn().hours === 0 &&
     this.timeUntilReturn().minutes === 0 &&
     this.timeUntilReturn().seconds === 0;
 
-  protected isMeeting = () => this.timeUntilMeeting().days === 0 &&
-    this.timeUntilMeeting().hours === 0 &&
-    this.timeUntilMeeting().minutes === 0 &&
-    this.timeUntilMeeting().seconds === 0;
+  protected isMeeting = () => this.currentMeeting() !== null;
 }
