@@ -54,9 +54,9 @@
       @if (pastMeetings().length > 0) {
       <ul>
         @for (meeting of pastMeetings(); track $index) {
-        <li>
+        <p>
           {{ meeting.start.toLocaleDateString() }} - {{ meeting.end.toLocaleDateString() }}
-        </li>
+        </p>
         }
       </ul>
       } @else {
