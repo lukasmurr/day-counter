@@ -20,7 +20,7 @@ const MEETINGS: Meeting[] = [
     // 1st meeting: 03.02.26 17:15 to 10.02.26 12:00
     { start: new Date('2026-02-03T17:15:00'), end: new Date('2026-02-10T12:00:00') },
     // 2nd meeting: 30.04.26 10:00 to 05.05.26 18:00
-    { start: new Date('2026-04-30T10:00:00'), end: new Date('2026-05-05T18:00:00') }
+    { start: new Date('2026-03-30T10:00:00'), end: new Date('2026-04-05T18:00:00') }
 ];
 
 @Injectable({
