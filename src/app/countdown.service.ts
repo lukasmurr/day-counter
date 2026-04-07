@@ -7,7 +7,7 @@ export interface TimeDiff {
     seconds: number;
 }
 
-const RETURN_DATE = new Date('2026-06-01T12:00:00');
+const RETURN_DATE = new Date('2026-05-27T12:00:00');
 const DEPARTURE_DATE = new Date('2026-01-05T09:30:00');
 
 // Meetings are now an array of objects with start and end
